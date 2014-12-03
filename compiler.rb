@@ -9,12 +9,11 @@ class Compiler < Sinatra::Base
   register Sinatra::AssetPack
 
   assets do
-
-    js :application, [
+    js :js, [
       '/js/*.js'
     ]
 
-    css :application, [
+    css :scss, [
       '/css/*.css',
     ]
 
