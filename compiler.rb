@@ -1,27 +1,29 @@
 require 'rubygems'
-require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/assetpack'
 require 'haml'
 
-get '/' do
-  haml :index
-end
+class Compiler < Sinatra::Base
 
+  register Sinatra::AssetPack
 
-register Sinatra::AssetPack
+  assets do
 
-assets do
+    js :application, [
+      '/js/*.js'
+    ]
 
-  js :application, [
-    '/js/*.js'
-  ]
+    css :application, [
+      '/css/*.css',
+    ]
 
-  css :application, [
-    '/css/*.css',
-  ]
+    js_compression :jsmin
+    css_compression :scss
 
-  js_compression :jsmin
-  css_compression :scss
+  end
+
+  get '/' do
+    haml :index
+  end
 
 end
