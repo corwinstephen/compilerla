@@ -9,16 +9,16 @@ class Compiler < Sinatra::Base
   register Sinatra::AssetPack
 
   assets do
-    js :js, [
+    js :application, [
       '/js/*.js'
     ]
 
-    css :scss, [
+    css :application, [
       '/css/*.css',
     ]
 
     js_compression :jsmin
-    css_compression :scss
+    css_compression :sass
 
   end
 
