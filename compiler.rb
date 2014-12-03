@@ -3,6 +3,7 @@ require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/assetpack'
 require 'haml'
+require 'rack/flash/test'
 
 get '/' do
   haml :index
