@@ -17,9 +17,6 @@ class Compiler < Sinatra::Base
       '/css/*.css',
     ]
 
-    serve '/css', from: 'assets/css'
-    serve '/js', from: 'assets/js'
-
     js_compression :jsmin
     css_compression :scss
 
