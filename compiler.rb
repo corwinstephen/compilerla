@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra/base'
 require 'sinatra/assetpack'
 require 'haml'
+require 'sass'
 
 class Compiler < Sinatra::Base
 
