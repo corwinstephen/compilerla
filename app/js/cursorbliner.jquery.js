@@ -26,13 +26,16 @@ $.fn.cursorblinker = function(){
     $cursor.toggle();
   };
 
-  var moveCursor = function(){
+  var textChanged = function(){
+    start();
+
     $cursor.css({
       left: $field.textWidth()
     });
   };
 
   var start = function(){
+    clearInterval(blinkInterval);
     $cursor.show();
     blinkInterval = setInterval(blink, 500);
   };
@@ -43,7 +46,7 @@ $.fn.cursorblinker = function(){
   };
 
   // Set events
-  $field.on("input", moveCursor);
+  $field.on("input", textChanged);
 
   $field.on("blur", function(){
     stop();
