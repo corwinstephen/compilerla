@@ -43,6 +43,11 @@ p {
       a {
         color:#fff;
         text-decoration:none;
+        opacity:.8;
+
+        &:hover {
+          opacity:1;
+        }
       }
 
       img {
