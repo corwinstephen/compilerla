@@ -1,3 +1,10 @@
+:javascript
+  $(document).ready(function(){
+    $('#email-input')
+      .cursorblinker()
+      .focus();
+  });
+
 #index-container
   .index-bluecover
 
@@ -6,3 +13,8 @@
     .index-centerbox
       %h1 Compiler.<span class="font-red">LA</span>
       %p A civic organization dedicated to improving lives in Los Angeles through technology
+
+      %label{for: "email"} [your] (email)>
+
+      %form{autocomplete: "off"}
+        %input#email-input{type: "text", name: "email", value: ""}
