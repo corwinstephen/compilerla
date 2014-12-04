@@ -22,6 +22,37 @@ p {
   background-size:cover;
   height:100vh;
   width:100%;
+  top:0;
+  bottom:0;
+}
+
+#index-toplinks {
+  position:absolute;
+  z-index:3;
+  width:400px;
+  left:50%;
+  margin-left:-200px;
+  font-size:24px;
+
+  ul {
+
+    li {
+      display:inline-block;
+      list-style:none;
+
+      a {
+        color:#fff;
+        text-decoration:none;
+      }
+
+      img {
+        width:75px;
+        height:75px;
+        vertical-align:middle;
+        margin:0 30px;
+      }
+    }
+  }
 }
 
 .index-bluecover {
@@ -38,7 +69,7 @@ p {
   margin:auto;
   z-index:2;
   height:100%;
-  min-height:500px;
+  min-height:600px;
 }
 
 .index-centerbox {
@@ -60,6 +91,7 @@ p {
 
   p {
     font-size:36px;
+    margin-top:10px;
   }
 
   label, input[type=text] {
