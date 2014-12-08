@@ -3,6 +3,34 @@
     $('#email-input')
       .cursorblinker()
       .focus();
+
+    var displayLine = function(line){
+      var $newLine = $("<div class='emailwrap-line'>").html("> " + line);
+      $(".emailwrap-output").append($newLine);
+    };
+
+    $('#email-input').on('keypress', function(e){
+      var $field = $(this);
+      if(e.which == 13){
+        e.preventDefault();
+        var request = $.post("/people", { email: $field.val() });
+        displayLine("Sending...");
+
+        var timeout = setInterval(function(){
+          $($(".emailwrap-line").last()).append(".");
+        }, 200);
+
+        request.done(function(res){
+          clearTimeout(timeout);
+
+          if(res.person) {
+            displayLine("Done. You've been added to our email list!");
+          } else {
+            displayLine("Uh oh, something went wrong. Please try again.");
+          }
+        });
+      }
+    });
   });
 
 #index-container
@@ -27,7 +55,11 @@
       %h1 Compiler.<span class="font-red">LA</span>
       %p A civic-minded organization using tech and data to build the Los Angeles of tomorrow
 
-      %label{for: "email"} [your] (email)>
 
-      %form{autocomplete: "off"}
-        %input#email-input{type: "text", name: "email", value: ""}
+      .emailwrap
+        %label{for: "email"} [your] (email)>
+        %form{autocomplete: "off"}
+          %input#email-input{type: "email", name: "email", value: ""}
+
+        .emailwrap-output
+
