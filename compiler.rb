@@ -29,6 +29,14 @@ class Compiler < Sinatra::Base
     haml :index
   end
 
+  get '/about' do
+    haml :about
+  end
+
+  get '/team' do
+    haml :team
+  end
+
   post '/people' do
     content_type :json
 
