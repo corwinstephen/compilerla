@@ -174,8 +174,8 @@ p {
   z-index:1;
 }
 
-.team-profiles {
-
+.team-member {
+  margin-bottom:100px;
 }
 
 .team-left, .team-right {
@@ -307,4 +307,14 @@ h1 {
   font-family:$font1;
   font-size:36px;
   color:$blue;
+}
+
+p {
+  a {
+    color:$blue;
+
+    &:hover {
+      text-decoration:underline;
+    }
+  }
 }
