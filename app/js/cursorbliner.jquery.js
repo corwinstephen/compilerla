@@ -1,5 +1,7 @@
 $.fn.textWidth = function(text, font) {
-    if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span style="display:inline;">').appendTo(document.body);
+    if (!$.fn.textWidth.fakeEl) {
+      $.fn.textWidth.fakeEl = $('<span style="display:inline;visibility:hidden;position:absolute;top:0;">').appendTo(document.body);
+    }
     var htmlText = text || this.val() || this.text();
     htmlText = $.fn.textWidth.fakeEl.text(htmlText).html(); //encode to Html
     htmlText = htmlText.replace(/\s/g, "&nbsp;"); //replace trailing and leading spaces

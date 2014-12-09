@@ -6,18 +6,28 @@
 
     var displayLine = function(line){
       var $newLine = $("<div class='emailwrap-line'>").html("> " + line);
-      $(".emailwrap-output").append($newLine);
+      $("#emailwrap-output").append($newLine);
     };
 
     $('#email-input').on('keypress', function(e){
       var $field = $(this);
       if(e.which == 13){
         e.preventDefault();
+        $field.blur();
         var request = $.post("/people", { email: $field.val() });
-        displayLine("Sending...");
+        displayLine("Sending");
 
+        // Thinking dots
+        var dots = 0;
         var timeout = setInterval(function(){
-          $($(".emailwrap-line").last()).append(".");
+          var $lastLine = $($(".emailwrap-line").last());
+          if(dots < 3){
+            dots++;
+            $lastLine.append(".");
+          } else {
+            dots = 0;
+            $lastLine.html($lastLine.html().substr(0, $lastLine.html().length - 3));
+          }
         }, 200);
 
         request.done(function(res){
@@ -61,5 +71,5 @@
         %form{autocomplete: "off"}
           %input#email-input{type: "email", name: "email", value: ""}
 
-        .emailwrap-output
+        #emailwrap-output
 

@@ -100,11 +100,10 @@ p {
 .index-centerbox {
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  background-color:rgba(#fff, .05);
   color:#fff;
   left:50%;
-  padding:20px 50px;
   position:absolute;
+  max-height:350px;
   top:45%;
   transform: translate(-50%, -50%);
   width:764px;
@@ -127,9 +126,9 @@ p {
 .emailwrap {
   font-family:$font1;
   font-size:24px;
-  position:absolute;
-  top:375px;
+  position:relative;
   left:0;
+  bottom:0;
 
   label, input[type=email] {
     font-size:24px;
