@@ -21,6 +21,10 @@ $content-width:900px;
   font-style: normal;
 }
 
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
 
 body {
   margin:0;
@@ -262,6 +266,7 @@ p {
 .about-background {
   background-color:$blue;
   width:100%;
+  padding-bottom:50px;
 }
 
 .about {
@@ -280,21 +285,93 @@ p {
       font-size:36px;
     }
   }
+
+  .line-break {
+    margin: 100px auto;
+    width:100% - (100% / $golden);
+  }
 }
 
 .about-computer {
   position:relative;
+  font-family:$font1;
+  margin-top:150px;
+}
+
+.about-code {
+  top:52px;
+  left:211px;
+  font-size:36px;
+}
+
+.about-ideas {
+  top:-67px;
+  left:402px;
+}
+
+.about-data {
+  left:604px;
+  top:24px;
+}
+
+.about-code, .about-ideas, .about-data {
+  position:absolute;
+  font-size:36px;
 }
 
 .about-computertext {
-  top:100px;
+  bottom:262px;
   position:absolute;
   left:50%;
   margin-left:-58px;
-  font-family:$font1;
-  font-size:24px;
+  font-size:30px;
 }
 
+.about-equals {
+  font-size:60px;
+  margin-top:29px;
+}
+
+.about-verybest {
+  font-size:48px;
+  font-family:$font1;
+}
+
+.about-weare {
+  .left {
+    border:3px solid rgba(#fff, .2);
+    border-radius:2px;
+    width:34%;
+    font-family:$font1;
+    box-sizing:border-box;
+    line-height:395px;
+    font-size:60px;
+  }
+
+  .right {
+    width:65%;
+  }
+
+  .left, .right {
+    height:395px;
+    float:left;
+  }
+
+  ul {
+    list-style:none;
+    margin:0;
+
+    li {
+      font-size:36px;
+      text-align:left;
+      margin-bottom:30px;
+
+      &:last-child {
+        margin-bottom:0;
+      }
+    }
+  }
+}
 
 // Library
 
@@ -333,6 +410,13 @@ p {
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 
+.margin-top {
+  margin-top:20px;
+}
+
+.margin-bottom {
+  margin-bottom:20px;
+}
 
 // Base
 a {
@@ -354,4 +438,8 @@ p {
       text-decoration:underline;
     }
   }
+}
+
+.red {
+  color:$red;
 }
