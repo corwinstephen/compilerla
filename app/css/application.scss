@@ -259,6 +259,43 @@ p {
   }
 }
 
+.about-background {
+  background-color:$blue;
+  width:100%;
+}
+
+.about {
+  text-align:center;
+  color:#fff;
+
+  p {
+    width:655px;
+    margin:50px auto;
+
+    &.small {
+      font-size:24px;
+    }
+
+    &.big {
+      font-size:36px;
+    }
+  }
+}
+
+.about-computer {
+  position:relative;
+}
+
+.about-computertext {
+  top:100px;
+  position:absolute;
+  left:50%;
+  margin-left:-58px;
+  font-family:$font1;
+  font-size:24px;
+}
+
+
 // Library
 
 .center {
