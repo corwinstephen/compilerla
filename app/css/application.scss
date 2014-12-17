@@ -295,8 +295,8 @@ p {
   }
 
   .line-break {
-    margin: 100px auto;
-    width:100% - (100% / $golden);
+    margin:0 auto;
+    background-color:lighten($blue, 10%);
   }
 }
 
@@ -336,16 +336,19 @@ p {
 }
 
 .about-equals {
-  font-size:60px;
+  font-size:144px;
   margin-top:29px;
 }
 
 .about-verybest {
   font-size:48px;
-  font-family:$font1;
+  font-family:$font2;
+  margin-bottom:100px;
 }
 
 .about-weare {
+  margin:100px 0;
+
   .left {
     border-radius:2px;
     width:34%;
