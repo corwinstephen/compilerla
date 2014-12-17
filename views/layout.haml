@@ -8,3 +8,26 @@
 
   %body
     = yield
+
+    #footer
+      .content
+        .margin-bottom.clearfix
+          #footer-logo
+            .footer-logotxt Compiler <span class="red">LA</span>
+
+          #footer-links
+            %div
+              %span 810 E 3rd St #32, Los Angeles CA, 90013
+            %div
+              %span.footer-linkslash /
+            %div
+              %img{ src: "images/twitter.svg" }
+              %a{ href: "http://twitter.com/compilerla", target: "_blank" } @compilerLA
+            %div
+              %span.footer-linkslash /
+            %div
+              %a{ href: "mailto:stephen@compiler.la" } stephen@compiler.la
+
+        .footer-break.margin-bottom
+
+        #footer-subline=  "© #{Date.today.year} Compiler LA"

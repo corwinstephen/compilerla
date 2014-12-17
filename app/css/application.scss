@@ -1,8 +1,9 @@
 // Colors
 $blue:#4e99d1;
 $yellow:#e2e464;
-$red:#ca2035;
-$grey: #999;
+$red:#db4f50;
+$grey:#999;
+$dark:#444;
 
 // Fonts
 $font1: Monaco, 'Lucida Console', monospace;
@@ -29,6 +30,7 @@ html, html a {
 body {
   margin:0;
   font-family:$font2;
+  background-color:$dark;
 }
 
 p {
@@ -157,6 +159,11 @@ p {
   }
 }
 
+.team-background {
+  background-color:#fff;
+  width:100%;
+}
+
 .team-sky {
   background-color:$blue;
   position:relative;
@@ -264,7 +271,7 @@ p {
   }
 }
 
-.about-background {
+.about-background, {
   background-color:$blue;
   width:100%;
   padding-bottom:50px;
@@ -373,10 +380,75 @@ p {
   }
 }
 
+#footer {
+  padding:50px 0;
+  color:#fff;
+
+  .footer-break {
+    height:2px;
+    background-color:#4d4d4d;
+  }
+}
+
+#footer-logo {
+  font-family: $font1;
+  font-size:24px;
+  float:left;
+  height:90px;
+  line-height:83px;
+}
+
+#footer-links {
+  float:right;
+  height:90px;
+  line-height:90px;
+
+  a {
+    color:#fff;
+    vertical-align:middle;
+
+    &:hover {
+      text-decoration:underline;
+    }
+  }
+
+  div {
+    vertical-align:top;
+    height:90px;
+    line-height:90px;
+    display:inline-block;
+
+    img {
+      position:relative;
+      vertical-align:middle;
+      width:20px;
+      height:20px;
+      bottom:2px;
+      margin-right:5px;
+    }
+  }
+}
+
+.footer-linkslash {
+  display:inline-block;
+  font-size:60px;
+  color:rgba($red, 0.28);
+  font-family:$font1;
+}
+
+#footer-subline {
+  font-size:14px;
+}
+
 // Library
 
 .center {
   text-align:center;
+}
+
+.content {
+  width:$content-width;
+  margin:0 auto;
 }
 
 .contentcolumn {
