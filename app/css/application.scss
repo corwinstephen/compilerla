@@ -36,12 +36,13 @@ p {
 }
 
 #toplinks {
-  font-size:24px;
+  font-size:30px;
   margin:0 auto;
-  width:400px;
+  width:330px;
   padding:10px 0;
 
   ul {
+    padding-left:0;
 
     li {
       display:inline-block;
@@ -70,7 +71,7 @@ p {
 #index-toplinks {
   @extend #toplinks;
   left:50%;
-  margin-left:-200px;
+  margin-left:-165px;
   position:absolute;
   z-index:3;
 }
