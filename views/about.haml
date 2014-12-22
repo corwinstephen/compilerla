@@ -31,12 +31,31 @@
 
     .line-break
 
-    .about-weare.clearfix
-      .left
-        WE ARE
+  .about-breakdown.clearfix
+    %ul
+      %li
+        %img.about-communityimg{ src: "images/community.svg" }
+        %dl
+          %dt Community
+          %dd We use events, installations, and outreach to help foster an inclusive, collaborative, and approachable civic-tech community in Los Angeles.
+      %li
+        %img.about-partnershipimg{ src: "images/partnership.svg" }
+        %dl
+          %dt Partnership
+          %dd We partner with organizations throughout Los Angeles to help build sites, apps, and technology.
 
-      .right
-        %ul
-          %li making public data more accessible and understandable.
-          %li bringing <span class="red">all people</span> together to solve problems and increase community engagement.
-          %li creating a home for civic tech in Los Angeles.
+        .about-breakdown-interested
+          %div Interested?
+          %a.button{ href: "mailto:stephen@compiler.la" } Shoot us an email
+
+      %li.about-breakdown-data
+        %img.about-dataimg{ src: "images/data.svg" }
+        %dl
+          %dt Data
+          %dd
+            Los Angeles runs better the more it knows about itself.<br /><br />
+            We look not only for ways to use existing data, but also for ways to produce and use new data.
+
+
+  .about-weare We are creating a home <br />for civic tech in Los Angeles
+

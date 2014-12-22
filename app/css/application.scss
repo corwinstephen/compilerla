@@ -346,41 +346,73 @@ p {
   margin-bottom:100px;
 }
 
-.about-weare {
+.about-breakdown {
+  color:#fff;
   margin:100px 0;
+  position:relative;
 
-  .left {
-    border-radius:2px;
-    width:34%;
-    font-family:$font1;
-    box-sizing:border-box;
-    line-height:395px;
-    font-size:60px;
+  img {
+    margin-bottom:40px / $golden;
   }
 
-  .right {
-    width:65%;
-  }
-
-  .left, .right {
-    height:395px;
-    float:left;
-  }
-
-  ul {
+  li {
     list-style:none;
-    margin:0;
+    width:33%;
+    display:inline-block;
+    vertical-align:top;
+    text-align:center;
 
-    li {
-      font-size:36px;
-      text-align:left;
-      margin-bottom:30px;
+    dl {
+      width:80%;
+      margin:0 auto;
 
-      &:last-child {
-        margin-bottom:0;
+      dt {
+        font-size:36px;
+        font-family:$font1;
+        text-transform:uppercase;
+        margin-bottom:40px;
+      }
+
+      dd {
+        margin-left:0;
+        font-size:24px;
+        line-height:32px;
       }
     }
   }
+}
+
+.about-breakdown-data {
+  position:relative;
+  top:43px;
+}
+
+.about-communityimg {
+  width:180px; 
+}
+
+.about-partnershipimg {
+  width:220px;
+}
+
+.about-dataimg {
+  width:150px;
+}
+
+.about-breakdown-interested {
+  margin-top:45px;
+
+  div {
+    font-size:24px;
+    margin-bottom:45px / $golden;
+  }
+}
+
+.about-weare {
+  text-align:center;
+  font-size:60px;
+  margin:200px 0;
+  color:#fff;
 }
 
 #footer {
@@ -444,6 +476,21 @@ p {
 }
 
 // Library
+
+a.button {
+  display:inline-block;
+  background-color:#333;
+  height:60px;
+  line-height:60px;
+  border-radius:1px;
+  color:#fff;
+  font-size:24px;
+  padding:5px 20px;
+
+  &:hover {
+    background-color:lighten(#333, 5%);
+  }
+}
 
 .center {
   text-align:center;
