@@ -49,6 +49,7 @@ p {
     li {
       display:inline-block;
       list-style:none;
+      position:relative;
 
       a {
         color:#fff;
@@ -57,6 +58,12 @@ p {
 
         &:hover {
           opacity:1;
+        }
+
+        &.index-toplinks-middle {
+          position:absolute;
+          left:25px;
+          bottom:-55px;
         }
       }
 
@@ -101,7 +108,7 @@ p {
   margin:auto;
   z-index:2;
   height:100%;
-  min-height:600px;
+  min-height:680px;
 }
 
 .index-centerbox {
