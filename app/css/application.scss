@@ -39,9 +39,10 @@ p {
 
 #toplinks {
   font-size:30px;
+  height:175px;
   margin:0 auto;
-  width:330px;
   padding:10px 0;
+  width:330px;
 
   ul {
     padding-left:0;
@@ -62,7 +63,7 @@ p {
 
         &.index-toplinks-middle {
           position:absolute;
-          left:25px;
+          left:24px;
           bottom:-55px;
         }
       }
