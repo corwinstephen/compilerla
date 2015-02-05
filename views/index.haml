@@ -47,18 +47,7 @@
   .index-bluecover
 
   #index-toplinks
-    %ul
-      %li
-        %a{ href: "/about" } ABOUT
-
-      %li
-        %a{ href: "/" }
-          %img{src: "/images/sungear.png"}
-
-        %a.index-toplinks-middle{ href: "https://medium.com/@CompilerLA" } BLOG
-
-      %li
-        %a{ href: "/team" } TEAM
+    = haml :_nav
     
 
   .main-column

@@ -1,18 +1,7 @@
 .team-background
   .team-sky
     #toplinks
-      %ul
-        %li
-          %a{ href: "/about" } ABOUT
-
-        %li
-          %a{ href: "/" }
-            %img{src: "/images/sungear.png"}
-
-          %a.index-toplinks-middle{ href: "https://medium.com/@CompilerLA" } BLOG
-
-        %li
-          %a{ href: "/team" } TEAM
+      = haml :_nav
 
     %svg#Layer_1{"enable-background" => "new 0 0 1000 318", :height => "318px", :version => "1.1", :viewbox => "0 0 1000 318", :width => "1000px", :x => "0px", "xml:space" => "preserve", :xmlns => "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", :y => "0px"}
       %g

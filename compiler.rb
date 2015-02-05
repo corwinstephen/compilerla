@@ -51,4 +51,8 @@ class Compiler < Sinatra::Base
     nb_client.call(:people, :create, post_data).to_json
   end
 
+  get '/reading_list' do
+    haml :reading_list
+  end
+
 end
