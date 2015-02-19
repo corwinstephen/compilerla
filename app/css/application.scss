@@ -39,7 +39,7 @@ p {
   font-family:$font2;
   line-height:21px;
   font-size:18px;
-  color:rgba(#000, .8);
+  color:rgba(#000, .7);
 
   &.bigger {
     font-size:21px;
@@ -324,7 +324,7 @@ h1 {
   p {
     margin-top:50px;
     font-size:36px;
-    line-height:40px;
+    line-height:48px;
     text-align:center;
   }
 }
@@ -349,7 +349,7 @@ h1 {
 
     &.big {
       font-size:36px;
-      line-height:36px;
+      line-height:48px;
     }
   }
 
@@ -362,7 +362,7 @@ h1 {
 .about-computer {
   position:relative;
   font-family:$font1;
-  margin-top:150px;
+  margin-top:250px;
 }
 
 .about-code {
@@ -402,16 +402,17 @@ h1 {
 .about-verybest {
   font-size:48px;
   font-family:$font2;
-  margin-bottom:100px;
+  margin-bottom:150px;
 }
 
 .about-breakdown {
   color:#fff;
-  margin:100px 0;
+  margin:200px 0;
   position:relative;
 
   img {
-    margin-bottom:40px / $golden;
+    margin-bottom:40px;
+    opacity:.8;
   }
 
   li {
@@ -442,9 +443,14 @@ h1 {
   }
 }
 
+.about-breakdown-community {
+  position:relative;
+  top:-49px;
+}
+
 .about-breakdown-data {
   position:relative;
-  top:43px;
+  top:3px;
 }
 
 .about-communityimg {
@@ -452,25 +458,28 @@ h1 {
 }
 
 .about-partnershipimg {
+  position:relative;
+  top:-27px;
   width:220px;
 }
 
 .about-dataimg {
   width:150px;
+  position:relative;
+  top:-27px;
 }
 
 .about-breakdown-interested {
-  margin-top:45px;
+  margin-top:20px;
 
-  div {
-    font-size:24px;
-    margin-bottom:45px / $golden;
+  .button {
+    margin-top:30px;
   }
 }
 
 .about-weare {
   text-align:center;
-  font-size:60px;
+  font-size:48px;
   margin:200px 0;
   color:#fff;
 }

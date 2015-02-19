@@ -4,7 +4,7 @@
 
 
   .main-column.about
-    %p.big
+    %p.big{style: "margin-top:100px;"}
       Compiler LA is transforming data, code, and ideas into solutions that make life better in Los Angeles.
 
     .about-computer
@@ -24,7 +24,7 @@
 
   .about-breakdown.clearfix
     %ul
-      %li
+      %li.about-breakdown-community
         %img.about-communityimg{ src: "images/community.svg" }
         %dl
           %dt Community
@@ -33,18 +33,17 @@
         %img.about-partnershipimg{ src: "images/partnership.svg" }
         %dl
           %dt Partnership
-          %dd We partner with organizations throughout Los Angeles to help build sites, apps, and technology.
+          %dd We partner with organizations throughout the city to help build sites, apps, and technology that makes life better in Los Angeles.
 
         .about-breakdown-interested
-          %div Interested?
-          %a.button{ href: "mailto:stephen@compiler.la" } Shoot us an email
+          %a.button{ href: "mailto:stephen@compiler.la" } Work with us
 
       %li.about-breakdown-data
         %img.about-dataimg{ src: "images/data.svg" }
         %dl
           %dt Data
           %dd
-            Los Angeles runs better the more it knows about itself.<br /><br />
+            Los Angeles runs better the more it knows about itself.
             We look not only for ways to use existing data, but also for ways to produce and use new data.
 
 
