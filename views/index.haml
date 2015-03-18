@@ -41,9 +41,20 @@
         });
       }
     });
+
+    //Rumble
+    $('.clients-box')
+      .jrumble()
+      .on("mouseover", function(){
+        $(this).trigger("startRumble");
+        var $this = $(this);
+        setTimeout(function(){
+          $this.trigger("stopRumble");
+        }, 200);
+      });
   });
 
-#index-container
+#mainscreen-container
   .index-bluecover
 
   #index-toplinks
@@ -64,3 +75,16 @@
 
         #emailwrap-output
 
+
+.clients
+  .clients-titlewrap
+    .clients-title Our clients
+    .clients-sub We work with rad people who give a damn about Los Angeles.
+      
+  .clients-boxwrap
+    .clients-box.isidore
+    .clients-box.wehox WeHoX
+    .clients-box.clockshop
+    .clients-box.ciclavia
+    .clients-box.myfigueroa MyFIGUEROA
+    .clients-box.futureofcities FUTURE of CITIES

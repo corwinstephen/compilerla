@@ -13,6 +13,7 @@ class Compiler < Sinatra::Base
   assets do
     js :application, [
       '/js/jquery.js',
+      '/js/jquery.jrumble.js',
       '/js/*.js'
     ]
 

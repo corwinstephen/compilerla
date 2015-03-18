@@ -3,7 +3,7 @@ $blue:#4e99d1;
 $yellow:#e2e464;
 $red:#db4f50;
 $grey:rgba(#000, .6);
-$dark:#444;
+$bg-dark:#444;
 
 // Fonts
 $font1: Monaco, 'Lucida Console', monospace;
@@ -11,9 +11,9 @@ $font2: 'CenturyGothicProCyr-Regular', 'Century Gothic', Helvetica, Arial, sans-
 
 // Measurements
 $golden:1.61803398875;
-$content-width:900px;
+$content-width:1000px;
 
-
+  
 @font-face {
   font-family: 'CenturyGothicProCyr-Regular';
   src: url('/fonts/CenturyGothicProCyr-Regular.eot?#iefix') format('embedded-opentype'),  url('/fonts/CenturyGothicProCyr-Regular.otf')  format('opentype'),
@@ -32,7 +32,7 @@ html, html a {
 body {
   margin:0;
   font-family:$font2;
-  background-color:$dark;
+  background-color:$bg-dark;
 }
 
 p {
@@ -67,11 +67,15 @@ h1 {
   font-weight:normal;
 }
 
+label {
+  font-weight:normal ! important;
+}
+
 #toplinks {
   font-size:30px;
   height:175px;
   margin:0 auto;
-  padding:10px 0;
+  padding:20px 0;
   text-align:center;
 
   ul {
@@ -118,13 +122,14 @@ h1 {
   width:584px;
 }
 
-#index-container {
+#mainscreen-container {
   background-image:url("/images/girlphone.jpg");
   background-size:cover;
   height:100vh;
   width:100%;
   top:0;
   bottom:0;
+  border-bottom:5px solid #fff;
 }
 
 .index-bluecover {
@@ -216,6 +221,90 @@ h1 {
   }
 }
 
+.clients {
+  color:#fff;
+  padding:50px 0 75px 0;
+  width:$content-width;
+  margin:0 auto;
+}
+
+.clients-titlewrap {
+  margin-bottom:67px;
+}
+
+.clients-title {
+  font-family:$font1;
+  font-size:96px;
+  display:inline-block;
+  width:405px;
+  margin-right:20px;
+}
+
+.clients-sub {
+  display:inline-block;
+  bottom:0;
+  font-size:24px;
+  color:rgba(#fff, .54);
+}
+
+.clients-boxwrap {
+  padding:30px 0 10px 0;
+  border:{
+    top:5px dashed $blue;
+    bottom:5px dashed $blue;
+  }
+}
+
+.clients-box {
+  display:inline-block;
+  width:317px;
+  height:317px;
+  line-height:317px;
+  margin:0 10px 20px 10px;
+  text-align:center;
+  font-weight:bold;
+  font-size:36px;
+  vertical-align:middle;
+
+  &:nth-child(3n + 1) {
+    margin-left:0;
+  }
+
+  &:nth-child(3n + 3) {
+    margin-right:0;
+  }
+
+  &.isidore {
+    background:url('/images/clients/isidore.svg') #60aa70 center center no-repeat;
+    background-size:200px 37px;
+  }
+
+  &.wehox {
+    background-color:#333;
+  }
+
+  &.clockshop {
+    background:url('/images/clients/clockshop.svg') #242424 center center no-repeat;
+    background-size:200px 60px;
+  }
+
+  &.ciclavia {
+    background:url('/images/clients/ciclavia.svg') #1ca4de center center no-repeat;
+    background-size:200px 60px;
+  }
+
+  &.myfigueroa {
+    background-color:#002c73;
+    color:#e6b00e;
+  }
+
+  &.futureofcities {
+    background-color:#fff;
+    color:#000;
+    font-size:24px;
+  }
+}
+
 .team-background {
   background-color:#fff;
   width:100%;
@@ -255,7 +344,7 @@ h1 {
 .team-left {
   width:100% - (100 / $golden);
   padding-right:2%;
-  padding-top:132px;
+  padding-top:141px;
 
   img {
     width:100%;
@@ -285,7 +374,7 @@ h1 {
   color:$grey;
   font-family:$font1;
   font-size:18px;
-  margin-bottom:20px;
+  margin-bottom:30px;
 }
 
 .team-website {
@@ -367,17 +456,17 @@ h1 {
 
 .about-code {
   top:52px;
-  left:211px;
+  left:255px;
   font-size:36px;
 }
 
 .about-ideas {
   top:-67px;
-  left:402px;
+  left:446px;
 }
 
 .about-data {
-  left:604px;
+  left:648px;
   top:24px;
 }
 
@@ -436,7 +525,7 @@ h1 {
 
       dd {
         margin-left:0;
-        font-size:24px;
+        font-size:21px;
         line-height:32px;
       }
     }
@@ -487,6 +576,7 @@ h1 {
 #footer {
   padding:50px 0;
   color:#fff;
+  border-top:1px solid rgba(#fff, .26);
 
   .footer-break {
     height:2px;
@@ -550,7 +640,7 @@ a.button {
   display:inline-block;
   background-color:#333;
   height:60px;
-  line-height:60px;
+  line-height:54px;
   border-radius:1px;
   color:#fff;
   font-size:24px;
@@ -558,6 +648,7 @@ a.button {
 
   &:hover {
     background-color:lighten(#333, 5%);
+    text-decoration:none ! important;
   }
 }
 
@@ -582,10 +673,10 @@ a.button {
 }
 
 .line-break {
-  height:4px;
+  height:1px;
   width:100%;
   margin-bottom:30px;
-  background-color:rgba(#fff, .5);
+  background-color:rgba(#000, .26);
 
   &.margins {
     margin:50px 0;
@@ -643,4 +734,20 @@ a.button {
       color:rgba(#000, .8);
     }
   }
+}
+
+.relative {
+  position:relative;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
 }
