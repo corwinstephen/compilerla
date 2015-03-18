@@ -250,8 +250,8 @@ label {
 .clients-boxwrap {
   padding:30px 0 10px 0;
   border:{
-    top:5px dashed $blue;
-    bottom:5px dashed $blue;
+    top:5px dashed rgba($blue, .54);
+    bottom:5px dashed rgba($blue, .54);
   }
 }
 
