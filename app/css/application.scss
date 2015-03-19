@@ -3,7 +3,7 @@ $blue:#4e99d1;
 $yellow:#e2e464;
 $red:#db4f50;
 $grey:rgba(#000, .6);
-$bg-dark:#444;
+$bg-dark:#333;
 
 // Fonts
 $font1: Monaco, 'Lucida Console', monospace;
@@ -280,11 +280,11 @@ label {
   }
 
   &.wehox {
-    background-color:#333;
+    background-color:#222;
   }
 
   &.clockshop {
-    background:url('/images/clients/clockshop.svg') #242424 center center no-repeat;
+    background:url('/images/clients/clockshop.svg') #222 center center no-repeat;
     background-size:200px 60px;
   }
 
