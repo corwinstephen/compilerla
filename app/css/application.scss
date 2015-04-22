@@ -253,6 +253,19 @@ label {
     top:5px dashed rgba($blue, .54);
     bottom:5px dashed rgba($blue, .54);
   }
+
+  a {
+    display:inline-block;
+    margin:0 10px 20px 10px;
+
+    &:nth-child(3n + 1) {
+      margin-left:0;
+    }
+
+    &:nth-child(3n + 3) {
+      margin-right:0;
+    }
+  }
 }
 
 .clients-box {
@@ -260,19 +273,11 @@ label {
   width:317px;
   height:317px;
   line-height:317px;
-  margin:0 10px 20px 10px;
   text-align:center;
   font-weight:bold;
   font-size:36px;
   vertical-align:middle;
 
-  &:nth-child(3n + 1) {
-    margin-left:0;
-  }
-
-  &:nth-child(3n + 3) {
-    margin-right:0;
-  }
 
   &.isidore {
     background:url('/images/clients/isidore.svg') #60aa70 center center no-repeat;
@@ -281,6 +286,7 @@ label {
 
   &.wehox {
     background-color:#222;
+    color:#fff;
   }
 
   &.clockshop {
