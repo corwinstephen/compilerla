@@ -5,7 +5,7 @@ GEM
       tilt
     httpclient (2.4.0)
     jsmin (1.0.1)
-    json (1.8.1)
+    json (2.3.0)
     nationbuilder-rb (0.4.1)
       httpclient (~> 2.4.0)
     rack (1.5.2)
